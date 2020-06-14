@@ -12,7 +12,7 @@ import nonebot
 init = path.join(path.dirname(__file__), 'loop') + '.py'
 if not path.exists(init):
     content = '''class Counter:
-        count = 0'''
+    count = 0'''
     with open(init, 'w') as file:
         file.write(content)
 from .loop import Counter  # 借助 use_reloader 实现当模块发生变化时自动重载整个 Python
