@@ -1,15 +1,15 @@
-# Repository: https://github.com/Lancercmd/Reloader
+# Repository: https://github.com/Lancercmd/reloader
 # Lancercmd / Reloader 使用 GPLv3 协议
 # nonebot: https://github.com/richardchien/nonebot
 # richardchien / nonebot 使用 MIT 协议
 # 确保 nonebot >= 1.5.0
 # 确保 bot.run(use_reloader=True)
-from nonebot import CommandSession, on_command
+from nonebot import on_command, CommandSession
 from os import path
 
 import nonebot
 
-init = path.join(path.dirname(__file__), 'loop') + '.py'
+init = path.join(path.dirname(__file__), 'loop.py')
 if not path.exists(init):
     content = '''class Counter:
     count = 0'''
@@ -20,8 +20,9 @@ from .loop import Counter  # 借助 use_reloader 实现当模块发生变化时�
 bot = nonebot.get_bot()
 SUPERUSERS = bot.config.SUPERUSERS  # 获取 SUPERUSERS
 
+
 @on_command('reload', aliases=('reboot', '重启', '重载'), only_to_me=True)
-async def reload(session:CommandSession):
+async def reload(session: CommandSession):
     uid = session.event.user_id
     if not uid in SUPERUSERS:  # SUPERUSERS: list
         return
