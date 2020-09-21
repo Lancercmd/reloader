@@ -1,5 +1,5 @@
 # Repository: https://github.com/Lancercmd/reloader
-# Lancercmd / Reloader 使用 GPLv3 协议
+# Lancercmd / reloader 使用 GPLv3 协议
 # nonebot: https://github.com/richardchien/nonebot
 # richardchien / nonebot 使用 MIT 协议
 # 确保 nonebot >= 1.5.0
