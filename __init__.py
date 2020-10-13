@@ -2,7 +2,7 @@
 # Lancercmd / reloader 使用 GPLv3 协议
 # nonebot: https://github.com/richardchien/nonebot
 # richardchien / nonebot 使用 MIT 协议
-# 确保 nonebot >= 1.5.0
+# 确保 nonebot >= 1.5.0, <2.0.0
 # 确保 bot.run(use_reloader=True)
 from nonebot import on_command, CommandSession
 from os import path
